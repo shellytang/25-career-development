@@ -21,3 +21,5 @@ Include a thorough set of tests for each function
 * Successfully Solve Problem 5pts
 * Sufficient set of tests 5pts
 
+### Extra Credit:
+* Implement an interative solution of binary search 2pts
