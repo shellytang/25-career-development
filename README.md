@@ -39,12 +39,14 @@
   * parse the buffer and use the root `<html>` element, subsequent HTML tags, and their text content to build a tree data structure
     * hint: you will need to refactor your node to allow a different type of data to be stored in the `.value` property. The remainder of the node should not change
       * ```javascript
-          Node {
-            value: {
-              eleName: 'xxx',
-              textContent: 'yyy' (can be empty string??)
-            },
-            children: [{Node}, {Node}, ...]
+          Tree{
+            root: Node {
+              value: {
+                eleName: 'xxx',
+                textContent: 'yyy' (can be empty string??)
+              },
+              children: [{Node}, {Node}, ...]
+            }
           }
         ```
 
