@@ -35,49 +35,44 @@ const createDOM = module.exports = function() {
     htmlTree.add(legend.html); //root
 
     //root
-    htmlTree.add(legend.head, legend.html); //head - root
-    htmlTree.add(legend.body, legend.html); //body - root
+    htmlTree.add(legend.head, legend.html);
+    htmlTree.add(legend.body, legend.html);
 
     //head
-    htmlTree.add(legend.title, legend.head);// title - head
+    htmlTree.add(legend.title, legend.head);
 
     //body
-    htmlTree.add(legend.header, legend.body); //header - body
-    htmlTree.add(legend.main, legend.body); //main - body
-    htmlTree.add(legend.footer, legend.body); //footer - body
+    htmlTree.add(legend.header, legend.body);
+    htmlTree.add(legend.main, legend.body);
+    htmlTree.add(legend.footer, legend.body);
 
     //header
-    htmlTree.add(legend.h2, legend.header); //h2 - header
-    htmlTree.add(legend.nav, legend.header); //nav - header
+    htmlTree.add(legend.h2, legend.header);
+    htmlTree.add(legend.nav, legend.header);
 
     //nav
-    htmlTree.add(legend.ul, legend.nav); //ul - nav
+    htmlTree.add(legend.ul, legend.nav);
 
     //ul
-    htmlTree.add(legend.li1, legend.ul); //li - ul
-    htmlTree.add(legend.li2, legend.ul); //li - ul
-    htmlTree.add(legend.li3, legend.ul); //li - ul
-    htmlTree.add(legend.li4, legend.ul); //li - ul
+    htmlTree.add(legend.li1, legend.ul);
+    htmlTree.add(legend.li2, legend.ul);
+    htmlTree.add(legend.li3, legend.ul);
+    htmlTree.add(legend.li4, legend.ul);
 
     //main
-    htmlTree.add(legend.section, legend.main); //section - main
+    htmlTree.add(legend.section, legend.main);
 
     //section
-    htmlTree.add(legend.sectP1, legend.section); //p - section
-    htmlTree.add(legend.sectP2, legend.section); //p - section
+    htmlTree.add(legend.sectP1, legend.section);
+    htmlTree.add(legend.sectP2, legend.section);
 
     //footer
-    htmlTree.add(legend.footerP, legend.footer); //p - footer
+    htmlTree.add(legend.footerP, legend.footer);
 
-    // console.log(htmlTree);
-    // htmlTree.add(data[0]); //root
-    function _printHelper(node) {
+    htmlTree.preOrder(function print(node) {
       console.log(node);
-    }
+    });
 
-    htmlTree.preOrder(_printHelper);
-
-    
     // //root
     // htmlTree.add(data[1], data[0]); //head - root
     // htmlTree.add(data[4], data[0]); //body - root

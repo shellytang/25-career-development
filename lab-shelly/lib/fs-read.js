@@ -1,7 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-// const Node = require('./tree-node');
 
 const readHTML = module.exports = function(file, callback) {
 
@@ -14,8 +13,7 @@ const readHTML = module.exports = function(file, callback) {
     newData = newData.map(function(i) {
       return i.trim();
     });
-    // return newData;
-    // console.log(newData);
+
     callback(null, newData);
   });
 };
