@@ -6,6 +6,7 @@ const Tree = module.exports = function() {
   this.root = null;
 };
 
+//O(N)
 Tree.prototype.add = function(val, parentVal) {
   let newNode = new Node(val);
 
@@ -24,6 +25,7 @@ Tree.prototype.add = function(val, parentVal) {
   }
 };
 
+//O(N)
 Tree.prototype.preOrder = function(cb) {
   _walk(this.root);
 

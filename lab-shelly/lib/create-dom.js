@@ -72,5 +72,6 @@ const createDOM = module.exports = function() {
     htmlTree.preOrder(function print(node) {
       console.log(node);
     });
+
   });
 };

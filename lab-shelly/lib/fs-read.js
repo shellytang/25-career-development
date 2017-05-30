@@ -13,7 +13,10 @@ const readHTML = module.exports = function(file, callback) {
     newData = newData.map(function(i) {
       return i.trim();
     });
-
+    // newData.forEach(ele => {
+    //   let newNode = new Node(ele);
+      // tree.add(ele);
+    // });
     callback(null, newData);
   });
 };
