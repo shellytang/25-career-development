@@ -32,7 +32,7 @@ const createDOM = module.exports = function() {
 
     let htmlTree = new Tree();
 
-    htmlTree.add(legend.html); //root
+    htmlTree.add(legend.html); //create root
 
     //root
     htmlTree.add(legend.head, legend.html);
@@ -72,46 +72,5 @@ const createDOM = module.exports = function() {
     htmlTree.preOrder(function print(node) {
       console.log(node);
     });
-
-    // //root
-    // htmlTree.add(data[1], data[0]); //head - root
-    // htmlTree.add(data[4], data[0]); //body - root
-    //
-    // //head
-    // htmlTree.add(data[2], data[1]);// title - head
-    //
-    // //body
-    // htmlTree.add(data[5], data[4]); //header - body
-    // htmlTree.add(data[16], data[4]); //main - body
-    // htmlTree.add(data[22], data[4]); //footer - body
-    //
-    // //header
-    // htmlTree.add(data[6], data[5]); //h2 - header
-    // htmlTree.add(data[7], data[5]); //nav - header
-    //
-    // //nav
-    // htmlTree.add(data[8], data[7]); //ul - nav
-    //
-    // //ul
-    // htmlTree.add(data[9], data[8]); //li - ul
-    // htmlTree.add(data[10], data[8]); //li - ul
-    // htmlTree.add(data[11], data[8]); //li - ul
-    // htmlTree.add(data[12], data[8]); //li - ul
-    //
-    // //main
-    // htmlTree.add(data[17], data[16]); //section - main
-    //
-    // //section
-    // htmlTree.add(data[18], data[17]); //p - section
-    // htmlTree.add(data[19], data[17]); //p - section
-    //
-    // //footer
-    // htmlTree.add(data[23], data[22]); //p - footer
-
-    // console.log(data);
-    // console.log(htmlTree);
-    // console.log('ROOT children', htmlTree.root.children);
-    // console.log('Head children', htmlTree.root.children[0].children);
   });
-
 };

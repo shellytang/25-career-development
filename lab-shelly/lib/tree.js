@@ -24,7 +24,6 @@ Tree.prototype.add = function(val, parentVal) {
   }
 };
 
-
 Tree.prototype.preOrder = function(cb) {
   _walk(this.root);
 
@@ -32,25 +31,4 @@ Tree.prototype.preOrder = function(cb) {
     cb(node);
     node.children.forEach(_walk);
   }
-};
-
-Tree.prototype.prune = function(val) {
-  if(!val) return new Error('must pass val');
-  if(!root) return;
-  let current = this.root;
-  let parent, index;
-
-  this.preOrder(node => {
-    current.children.forEach((child, idx) => {
-      if(child.val === val) {
-        index = idx;
-        parent = current;
-        return;
-      }
-      current = node;
-    });
-  });
-
-  if(!parent) return new Error('blah');
-  parent.children.splice(index, 1);
 };
